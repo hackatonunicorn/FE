@@ -11,7 +11,6 @@ import {
   Brain
 } from 'lucide-react'
 import { NavItem } from '@/types'
-import { Button } from '@/components/ui'
 
 const navigation: NavItem[] = [
   {

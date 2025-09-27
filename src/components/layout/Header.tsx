@@ -1,6 +1,5 @@
-import { Search, Bell, Settings, User } from 'lucide-react'
+import { Bell } from 'lucide-react'
 import { useTheme } from '@/hooks'
-import { Theme } from '@/types'
 
 export function Header() {
   const [theme, setTheme] = useTheme()

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { Eye, EyeOff, Mail, Lock, ArrowRight, ArrowLeft } from 'lucide-react'
-import { Button, Input, Card, CardContent, CardHeader, CardTitle } from '@/components/ui'
+import { Button, Input, Card, CardContent } from '@/components/ui'
 
 export function SignIn() {
   const [formData, setFormData] = useState({
