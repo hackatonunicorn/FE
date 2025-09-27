@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { TrendingUp, Users, DollarSign, Activity, Building2, Target, BarChart3, CheckCircle2 } from 'lucide-react'
+import { Building2, Target, BarChart3, CheckCircle2 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui'
 import { RevenueChart, IndustryChart } from '@/components/charts'
 

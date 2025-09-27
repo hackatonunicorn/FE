@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {
   Plus,
@@ -9,17 +9,15 @@ import {
   Edit,
   Pause,
   Play,
-  Trash2,
   ArrowUpDown,
   Check,
   X,
   BarChart3,
-  Users,
   MessageSquare,
   Calendar,
   Target
 } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, Button, Badge, Dropdown, DropdownContent, DropdownItem } from '@/components/ui'
+import { Card, CardContent, Button, Badge, Dropdown, DropdownContent, DropdownItem } from '@/components/ui'
 
 interface Campaign {
   id: string
@@ -82,7 +80,6 @@ export function Campaigns() {
   const [sortField, setSortField] = useState<SortField>('updatedAt')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
   const [selectedCampaigns, setSelectedCampaigns] = useState<string[]>([])
-  const [showBulkActions, setShowBulkActions] = useState(false)
 
   const statusOptions = [
     { value: 'all', label: 'All Status', count: mockCampaigns.length },
@@ -161,7 +158,8 @@ export function Campaigns() {
         action: () => {
           // Navigate to edit page
           window.location.href = `/app/campaigns/edit/${campaign.id}`
-        }
+        },
+        className: ''
       }
     ]
 
@@ -173,7 +171,8 @@ export function Campaigns() {
           if (confirm(`Pause campaign "${campaign.name}"?`)) {
             alert(`Campaign "${campaign.name}" has been paused`)
           }
-        }
+        },
+        className: ''
       })
     } else if (campaign.status === 'paused') {
       baseItems.push({ 
@@ -183,7 +182,8 @@ export function Campaigns() {
           if (confirm(`Resume campaign "${campaign.name}"?`)) {
             alert(`Campaign "${campaign.name}" has been resumed`)
           }
-        }
+        },
+        className: ''
       })
     }
 
@@ -508,7 +508,7 @@ export function Campaigns() {
               {/* Mobile Cards */}
               <div className="lg:hidden">
                 <div className="p-4 space-y-4">
-                  {filteredAndSortedCampaigns.map((campaign, index) => (
+                  {filteredAndSortedCampaigns.map((campaign) => (
                     <CampaignCard key={campaign.id} campaign={campaign} />
                   ))}
                 </div>

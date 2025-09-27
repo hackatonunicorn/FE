@@ -6,7 +6,7 @@ import { Button, Input, Card, CardContent } from '@/components/ui'
 
 interface PasswordStrength {
   score: number
-  feedback: string
+  feedback: string[]
 }
 
 const getPasswordStrength = (password: string): PasswordStrength => {

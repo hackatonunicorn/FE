@@ -8,11 +8,7 @@ import {
   Plus,
   ChevronDown,
   Mail,
-  Phone,
   Calendar,
-  Check,
-  X,
-  AlertTriangle,
   Info
 } from 'lucide-react'
 import {

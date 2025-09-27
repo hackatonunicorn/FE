@@ -1,10 +1,9 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, useInView, useAnimation, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { LandingHeader, LandingFooter, CalendlyModal, ContactSalesModal } from '@/components/landing'
 import {
-  TrendingUp,
   Users,
   Target,
   Zap,
@@ -15,8 +14,6 @@ import {
   ArrowRight,
   Play,
   Sparkles,
-  Building2,
-  DollarSign,
   Clock,
   Globe,
   Award,
@@ -71,7 +68,7 @@ function AnimatedCounter({ end, duration = 2, suffix = "", prefix = "" }: {
 }
 
 // Enhanced scroll-triggered animation hook
-function useScrollAnimation(threshold = 0.3) {
+function useScrollAnimation(_threshold = 0.3) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const controls = useAnimation()
@@ -85,29 +82,6 @@ function useScrollAnimation(threshold = 0.3) {
   return [ref, controls] as const
 }
 
-// Floating element component
-function FloatingElement({ children, delay = 0, duration = 3 }: { 
-  children: React.ReactNode; 
-  delay?: number; 
-  duration?: number; 
-}) {
-  return (
-    <motion.div
-      initial={{ y: 0 }}
-      animate={{ 
-        y: [-10, 10, -10],
-      }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-    >
-      {children}
-    </motion.div>
-  )
-}
 
 // Testimonial carousel component
 function TestimonialCarousel() {

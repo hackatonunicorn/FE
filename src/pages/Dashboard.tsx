@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
   Target,
@@ -6,7 +5,6 @@ import {
   TrendingUp,
   DollarSign
 } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, Button, Avatar } from '@/components/ui'
 import { MetricsCard, ActivityFeed, MeetingsWidget, PerformanceChart } from '@/components/charts'
 import type { Activity, Meeting, ChartDataPoint } from '@/components/charts'
 

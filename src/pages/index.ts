@@ -1,7 +1,6 @@
 export { Landing } from './Landing'
 export { HomePage } from './HomePage'
-export { DashboardPage } from './DashboardPage'
-export { AnalyticsPage } from './AnalyticsPage'
+export { DashboardPageOld as DashboardPage } from './DashboardPage'
 export { SettingsPage } from './SettingsPage'
 export { DesignSystemPage } from './DesignSystemPage'
 export { UIComponentsPage } from './UIComponentsPage'

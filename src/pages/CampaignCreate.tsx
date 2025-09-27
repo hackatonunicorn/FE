@@ -6,7 +6,6 @@ import {
   ArrowRight,
   Sparkles,
   Target,
-  Users,
   Building2,
   FileText,
   Send,
@@ -87,9 +86,9 @@ const industries = [
   'Energy', 'Manufacturing', 'Agriculture', 'Security'
 ]
 
-const geographies = [
-  'North America', 'Europe', 'Asia Pacific', 'Latin America', 'Middle East & Africa'
-]
+// const geographies = [
+//   'North America', 'Europe', 'Asia Pacific', 'Latin America', 'Middle East & Africa'
+// ]
 
 
 export function CampaignCreate() {
@@ -739,7 +738,7 @@ export function CampaignCreate() {
                         <div>
                           <div className="font-medium text-green-900 mb-2">Ready to Launch</div>
                           <div className="text-sm text-green-700 mb-4">
-                            Your campaign is ready to reach {getEstimatedMatches().toLocaleString()} investors.
+                            Your campaign is ready to reach 1,250 investors.
                           </div>
                           <Button
                             size="lg"

@@ -4,14 +4,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import {
   ArrowLeft,
   ArrowRight,
-  Sparkles,
   Target,
-  Users,
   Building2,
   FileText,
   Send,
   CheckCircle,
-  Calendar
 } from 'lucide-react'
 import { Button, Input, Card, CardContent, CardHeader, CardTitle, Badge } from '@/components/ui'
 
